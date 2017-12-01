@@ -1,0 +1,18 @@
+{
+    "license": "MIT",
+    "version": "1.0.0",
+    "author": "ctf0",
+    "name": "vue-multi-ref",
+    "main": "src/index.js",
+    "description": "a vue v2 directive to bind the same ref for more than one element",
+    "homepage": "https://github.com/ctf0/vue-multi-ref",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ctf0/vue-multi-ref.git"
+    },
+    "keywords": [
+        "vue",
+        "directive",
+        "ref"
+    ]
+}
