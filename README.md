@@ -1,6 +1,8 @@
-# Vue Multi Ref
-
-[![npm](https://img.shields.io/npm/v/vue-multi-ref.svg?style=for-the-badge)](https://www.npmjs.com/package/vue-multi-ref) [![npm](https://img.shields.io/npm/dt/vue-multi-ref.svg?style=for-the-badge)](https://www.npmjs.com/package/vue-multi-ref)
+<h1 align="center">
+    Vue Multi Ref
+    <br>
+    <a href="https://www.npmjs.com/package/vue-multi-ref"><img src="https://img.shields.io/npm/v/vue-multi-ref.svg?style=for-the-badge" alt="npm" /></a> <a href="https://www.npmjs.com/package/vue-multi-ref"><img src="https://img.shields.io/npm/dt/vue-multi-ref.svg?style=for-the-badge" alt="npm" /></a>
+</h1>
 
 This is a directive to help use same `ref` on more than one element.
 
@@ -16,28 +18,33 @@ npm install vue-multi-ref --save
 
 ## Usage
 
-**1-** register the directive
+- register the directive
 
-```js
-window.Vue = require('vue')
-require('vue-multi-ref')
+    ```js
+    window.Vue = require('vue')
+    require('vue-multi-ref')
 
-new Vue({
-    el: '#app',
-})
-```
+    new Vue({
+        el: '#app',
+    })
+    ```
 
-**2-** now add `v-multi-ref="'refName'"` to any number of elements that you want to have the same ref, ex.
+- now add `v-multi-ref:refName` to any number of elements that you want to have the same ref, ex.
+    + `refName` could be
+        - camelCase = `refName`
+        - kebab-case = `ref-name`
+        - snake-case = `ref_name`
 
-```html
-<div v-multi-ref="'ref1'">a</div>
-<li v-multi-ref="'ref1'">b</li>
-<a v-multi-ref="'ref1'">c</a>
-```
+    ```html
+    <div v-multi-ref:my-ref>a</div>
+    <li v-multi-ref:my-ref>b</li>
+    <a v-multi-ref:my-ref>c</a>
+    ```
 
 - result
-```js
-// console.log(this.$refs.ref1)
 
-> ref1: (3) [div, li, a]
-```
+    ```js
+    // console.log(this.$refs['my-ref'])
+
+    > my-ref: (3) [div, li, a]
+    ```

@@ -6,7 +6,7 @@
  */
 
 function addRef(el, binding, vnode) {
-    const ref = binding.value
+    const ref = binding.arg
     const vm = vnode.context
     const thing = vnode.componentInstance || vnode.elm
     if (!vm.$refs.hasOwnProperty(ref)) {
@@ -18,7 +18,7 @@ function addRef(el, binding, vnode) {
     }
 }
 
-function removeRef(el, {value: ref }, {context: vm }, vnode) {
+function removeRef(el, {arg: ref}, {context: vm}, vnode) {
     if (vm.$refs.hasOwnProperty(ref)) {
         const arr = vm.$refs[ref]
         const thing = vnode.componentInstance || vnode.elm
