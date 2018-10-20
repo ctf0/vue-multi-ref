@@ -25,7 +25,7 @@ npm install vue-multi-ref --save
     require('vue-multi-ref')
 
     new Vue({
-        el: '#app',
+        el: '#app'
     })
     ```
 
