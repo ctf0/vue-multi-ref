@@ -21,12 +21,10 @@ npm install vue-multi-ref --save
 - register the directive
 
     ```js
-    window.Vue = require('vue')
-    require('vue-multi-ref')
+    import Vue from 'vue'
+    import 'vue-multi-ref' // will also work if window.Vue is defined
 
-    new Vue({
-        el: '#app'
-    })
+    new Vue({ el: '#app' })
     ```
 
 - now add `v-multi-ref:refName` to any number of elements that you want to have the same ref, ex.
