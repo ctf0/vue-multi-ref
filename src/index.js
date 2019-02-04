@@ -29,7 +29,9 @@ function removeRef(el, {arg: ref}, {context: vm}, vnode) {
     }
 }
 
-Vue.directive('multi-ref', {
+const vue = window.Vue || require('vue').default
+
+vue.directive('multi-ref', {
     bind: addRef,
     update: addRef,
     unbind: removeRef
